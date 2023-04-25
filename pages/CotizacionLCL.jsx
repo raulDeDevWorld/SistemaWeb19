@@ -185,9 +185,7 @@ function CotizacionTerrestre() {
     }
     console.log(calc)
 
-
-
-    useEffect(() => {
+function generateNO() {
         let cotizacionNo = userDB.NotaDeCobranza
             ? `${userDB.NotaDeConbranza + 1 < 10 ? '00' : ''}${userDB.NotaDeConbranza + 1 > 9
                 && userDB.NotaDeConbranza + 1 < 100 ? '0' : ''}${userDB.NotaDeConbranza + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
@@ -199,6 +197,11 @@ function CotizacionTerrestre() {
             ["NC-COTIZACION No"]: cotizacionNo,
             ["NC-FECHA"]: date
         })
+
+    }
+
+    useEffect(() => {
+        
 
     }, [userDB, tarifa]);
 
@@ -376,7 +379,10 @@ function CotizacionTerrestre() {
             </div>
 
 
-            <InvoicePDF click={handlerPdfButton} />
+            <div className={style.containerFilter}>
+                <Button style={'buttonPrimary'} click={generateNO}>Generar N°</Button>
+                <InvoicePDF />
+            </div>
 
             <br />
             <br />
