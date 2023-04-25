@@ -91,7 +91,20 @@ function CotizacionTerrestre() {
 
     console.log(pdfData)
 
+function generateNO() {
+        let cotizacionNo = userDB.NotaDeCobranza
+            ? `${userDB.NoDeManifiesto + 1 < 10 ? '00' : ''}${userDB.NoDeManifiesto + 1 > 9
+                && userDB.NoDeManifiesto + 1 < 100 ? '0' : ''}${userDB.NoDeManifiesto + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
+        let date = getDayMonthYear()
 
+
+        userDB !== '' && setUserPdfData({
+            ...pdfData,
+            ["MC-COTIZACION No"]: cotizacionNo,
+            ["MC-FECHA"]: date
+        })
+
+    }
 
     return (
         <Layout>
@@ -139,7 +152,7 @@ function CotizacionTerrestre() {
                             </div>
                             <div>
                                 <input type="text" className={style.negrita} value='NO' placeholder='' />
-                                <input type="text" name={"NO"} onChange={handleEventChange} placeholder='' />
+                                <input type="text" name={"NO"} onChange={handleEventChange} placeholder='' defaultValue={pdfData['MC-COTIZACION No'] && pdfData['MC-COTIZACION No']}/>
                             </div>
 
                             <div>
