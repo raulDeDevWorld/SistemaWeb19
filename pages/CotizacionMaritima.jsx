@@ -277,28 +277,28 @@ function CotizacionMaritima() {
                     <div className={style.items}>
                         <div>
                             <label htmlFor="">NOMBRE</label>
-                            <input type="text" name={"NOMBRE"} onChange={handleEventChange} defaultValue={itemSelect['nombre'] ? itemSelect['nombre'] : ''} />
+                            <input type="text" name={"nombre"} onChange={handleEventChange} defaultValue={itemSelect['nombre'] ? itemSelect['nombre'] : ''} />
                         </div>
                         <div>
                             <label htmlFor="">CORREO</label>
-                            <input type="text" name={"CORREO"} onChange={handleEventChange} defaultValue={itemSelect['correo'] ? itemSelect['correo'] : ''} />
+                            <input type="text" name={"correo"} onChange={handleEventChange} defaultValue={itemSelect['correo'] ? itemSelect['correo'] : ''} />
                         </div>
                         <div>
                             <label htmlFor="">EMPRESA</label>
-                            <input type="text" name={"EMPRESA"} onChange={handleEventChange} defaultValue={itemSelect['empresa'] ? itemSelect['empresa'] : ''} />
+                            <input type="text" name={"empresa"} onChange={handleEventChange} defaultValue={itemSelect['empresa'] ? itemSelect['empresa'] : ''} />
                         </div>
                         <div>
                             <label htmlFor="">TELEFONO</label>
-                            <input type="text" name={"TELEFONO"} onChange={handleEventChange} defaultValue={itemSelect['telefono'] ? itemSelect['telefono'] : ''} />
+                            <input type="text" name={"telefono"} onChange={handleEventChange} defaultValue={itemSelect['telefono'] ? itemSelect['telefono'] : ''} />
                         </div>
                         <div>
                             <label htmlFor="">CARGO</label>
-                            <input type="text" name={"CARGO"} onChange={handleEventChange} defaultValue={itemSelect['cargo'] ? itemSelect['cargo'] : ''} />
+                            <input type="text" name={"cargo"} onChange={handleEventChange} defaultValue={itemSelect['cargo'] ? itemSelect['cargo'] : ''} />
                         </div>
 
                         <div>
                             <label htmlFor="">CIUDAD</label>
-                            <input type="text" name={"CIUDAD"} onChange={handleEventChange} defaultValue={itemSelect['ciudad'] ? itemSelect['ciudad'] : ''} />
+                            <input type="text" name={"ciudad"} onChange={handleEventChange} defaultValue={itemSelect['ciudad'] ? itemSelect['ciudad'] : ''} />
                         </div>
                     </div>
                     <br />
