@@ -576,7 +576,8 @@ function CotizacionMaritima() {
                             return (
 
                                 <div className={style.inputsAll} key={index}>
-                                    <input type="text" name={`EXCLUYE${index}`} onChange={handleEventChange} defaultValue={pdfData[`CM-EXCLUYE${index}`] && pdfData[`CM-EXCLUYE${index}`]} />M                                </div>
+                                    <input type="text" name={`EXCLUYE${index}`} onChange={handleEventChange} defaultValue={pdfData[`CM-EXCLUYE${index}`] && pdfData[`CM-EXCLUYE${index}`]} />
+                                </div>
                             )
                         })
                     }
