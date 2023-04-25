@@ -452,7 +452,10 @@ function generateNO() {
 
                 </form>
             </div >
-            <InvoicePDF  />
+           <div className={style.containerFilter}>
+                <Button style={'buttonPrimary'} click={generateNO}>Generar N°</Button>
+                <InvoicePDF />
+            </div>
 
             <br />
             <br />
