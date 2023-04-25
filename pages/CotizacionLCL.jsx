@@ -8,7 +8,7 @@ import Card from '../components/Card'
 import { getDayMonthYear } from "../utils/Fecha";
 import { writeUserData } from '../firebase/utils';
 
-
+  
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 
 
